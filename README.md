@@ -1,2 +1,2 @@
-# chatbot
+# ChatBot
 Chat interface for LLMs
