@@ -18,7 +18,7 @@ if 'buffer_memory' not in st.session_state:
 
 if "messages" not in st.session_state.keys(): # Initialize the chat message history
     st.session_state.messages = [
-        {"role": "assistant", "content": "Welcome to Raju ChatBot, How can I help you today?"}
+        {"role": "assistant", "content": "How can I help you today?"}
     ]
 
 # Initialize ChatOpenAI and ConversationChain
@@ -30,7 +30,7 @@ conversation = ConversationChain(memory=st.session_state.buffer_memory, llm=llm)
 
 # Create user interface
 st.title("🗣️ Conversational Chatbot")
-st.subheader("㈻ Simple Chat Interface for LLMs")
+st.subheader("Welcome to Raju ChatBot,")
 
 
 if prompt := st.chat_input("Your question"): # Prompt for user input and save to chat history
