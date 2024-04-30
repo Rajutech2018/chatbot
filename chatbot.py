@@ -43,7 +43,7 @@ for message in st.session_state.messages: # Display the prior chat messages
 # If last message is not from assistant, generate a new response
 if st.session_state.messages[-1]["role"] != "assistant":
     with st.chat_message("assistant"):
-        with st.spinner("Thinking..."):
+        with st.spinner("Loading..."):
             response = conversation.predict(input = prompt)
             st.write(response)
             message = {"role": "assistant", "content": response}
